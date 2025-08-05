@@ -1,6 +1,8 @@
 const express = require('express');
-const { register, login } = require('../controllers/AuthController');
-const requestLimit = require('../middlewares/requestLimit')
+
+const requestLimit = require('../middlewares/requestLimit');
+const { register, login } = require('../controllers/authController')
+
 
 
 
