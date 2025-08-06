@@ -64,7 +64,7 @@ const searchPosts = async (req, res) => {
 
     const homes = result.rows.map(home => ({
       ...home,
-      images: home.images.map(img => `http://localhost:3000/uploads/${img}`)
+      images: home.images
     }));
 
     res.status(200).json(homes);
