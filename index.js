@@ -16,8 +16,10 @@ dotenv.config()
 const app = express()
 
 app.use(cors({
-    origin:'https://roomtap.netlify.app'
-}))
+    origin: process.env.CLIENT_URL,
+    credentials: true,
+  }));
+  
 
 app.use('/uploads', express.static('uploads'));
 app.use(express.json())
